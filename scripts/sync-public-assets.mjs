@@ -57,7 +57,14 @@ for (const { from, to } of copies) {
 }
 
 if (copied === 0) {
-  console.warn("[sync-public-assets] no files copied — ensure react-web/public assets exist for deploy.");
+  const hasPublicAssets =
+    existsSync(path.join(publicDir, "logo123.jpeg")) &&
+    existsSync(path.join(publicDir, "images", "4.webp"));
+  if (hasPublicAssets) {
+    console.log("[sync-public-assets] standalone deploy — using committed public/ assets.");
+  } else {
+    console.warn("[sync-public-assets] no files copied — add images under public/ for deploy.");
+  }
 } else {
   console.log(`[sync-public-assets] done (${copied} file(s)).`);
 }
