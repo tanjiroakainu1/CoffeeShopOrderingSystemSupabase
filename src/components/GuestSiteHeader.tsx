@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { Download, LogIn } from "lucide-react";
-import { AppBrand } from "@/core/assets";
+import { AppBrand, appCopyrightLine } from "@/core/assets";
 import { APP_DOWNLOAD } from "@/core/appDownload";
 import { CafeLocation } from "@/core/cafeLocation";
 
@@ -46,7 +46,7 @@ export function GuestPageFooter() {
             Android app
           </a>
         </div>
-        <p className="mt-6 text-xs text-muted/80">© {new Date().getFullYear()} {AppBrand.displayName}</p>
+        <p className="mt-6 text-xs text-muted/80">{appCopyrightLine()}</p>
       </div>
     </footer>
   );

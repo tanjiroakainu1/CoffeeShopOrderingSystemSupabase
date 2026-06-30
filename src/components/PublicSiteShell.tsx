@@ -1,6 +1,7 @@
 import { useEffect, useState, type ReactNode } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Download } from "lucide-react";
+import { AppDeveloperCredit } from "@/components/AppDeveloperCredit";
 import { AppSidebarShell } from "@/components/AppSidebarShell";
 import { Logo } from "@/components/ui";
 import { AppBrand } from "@/core/assets";
@@ -56,15 +57,18 @@ export function PublicSiteShell({
   );
 
   const sidebarFooter = (
-    <a
-      href={APP_DOWNLOAD.apkPath}
-      download={APP_DOWNLOAD.fileName}
-      className="app-sidebar-footer-btn"
-      onClick={() => setMobileOpen(false)}
-    >
-      <Download className="h-4 w-4 shrink-0" />
-      Download Android app
-    </a>
+    <>
+      <a
+        href={APP_DOWNLOAD.apkPath}
+        download={APP_DOWNLOAD.fileName}
+        className="app-sidebar-footer-btn"
+        onClick={() => setMobileOpen(false)}
+      >
+        <Download className="h-4 w-4 shrink-0" />
+        Download Android app
+      </a>
+      <AppDeveloperCredit className="mt-2 px-1 text-center" compact />
+    </>
   );
 
   return (

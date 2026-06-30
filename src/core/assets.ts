@@ -5,6 +5,11 @@ export const AppAssets = {
 } as const;
 
 export const AppBrand = {
-  displayName: "Roast & Bean",
-  androidLabel: "BEAN.der",
+  displayName: import.meta.env.VITE_APP_NAME?.trim() || "Roast & Bean",
+  androidLabel: import.meta.env.VITE_APP_ANDROID_LABEL?.trim() || "BEAN.der",
+  developerName: import.meta.env.VITE_APP_DEVELOPER_NAME?.trim() || "Raminder Jangao",
 } as const;
+
+export function appCopyrightLine(year = new Date().getFullYear()) {
+  return `© ${year} ${AppBrand.displayName} · Developed by ${AppBrand.developerName}`;
+}

@@ -104,7 +104,12 @@ export function AdminShell({ onSignOut }: { onSignOut: () => void }) {
   );
 
   const sidebarFooter = user ? (
-    <p className="truncate rounded-lg bg-white/10 px-3 py-2 text-xs text-white/80">{user.email}</p>
+    <>
+      <p className="truncate rounded-lg bg-white/10 px-3 py-2 text-xs text-white/80">{user.email}</p>
+      <p className="mt-2 px-1 text-center text-[0.65rem] font-semibold text-white/55">
+        Developed by {AppBrand.developerName}
+      </p>
+    </>
   ) : null;
 
   return (

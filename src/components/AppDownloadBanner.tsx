@@ -37,7 +37,7 @@ export function AppDownloadBanner({ variant = "card", className = "" }: AppDownl
           <div className="min-w-0">
             <p className="font-bold text-brown-deep">Get the Android app</p>
             <p className="mt-0.5 text-sm text-muted">
-              {AppBrand.displayName} v{APP_DOWNLOAD.version} · install on your phone
+              {AppBrand.displayName} v{APP_DOWNLOAD.version} · by {AppBrand.developerName}
             </p>
           </div>
         </div>
@@ -71,8 +71,8 @@ export function AppDownloadBanner({ variant = "card", className = "" }: AppDownl
           Take {AppBrand.displayName} with you
         </h2>
         <p className="mt-2 max-w-xl text-sm leading-relaxed text-white/90">
-          Download our Android app for the same menu, bag, GCash checkout, and order tracking — optimized for
-          your phone.
+          Download our Android app for the same menu, bag, GCash checkout, and order tracking — by{" "}
+          {AppBrand.developerName}.
         </p>
       </div>
       {link}

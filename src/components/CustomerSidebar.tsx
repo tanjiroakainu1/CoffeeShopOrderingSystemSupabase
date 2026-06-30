@@ -6,6 +6,7 @@ import { pesoFromCents } from "@/core/formatters";
 import { Logo } from "@/components/ui";
 import { AppBrand } from "@/core/assets";
 import { APP_DOWNLOAD } from "@/core/appDownload";
+import { AppDeveloperCredit } from "@/components/AppDeveloperCredit";
 import { CUSTOMER_NAV_ORDER, CUSTOMER_SECTIONS, type CustomerSection } from "@/core/appRoutes";
 import type { UserAccount } from "@/types";
 
@@ -90,6 +91,7 @@ export function CustomerSiteLayout({
         <Download className="h-4 w-4 shrink-0" />
         Download Android app
       </a>
+      <AppDeveloperCredit className="mt-2 px-1 text-center" compact />
     </>
   );
 

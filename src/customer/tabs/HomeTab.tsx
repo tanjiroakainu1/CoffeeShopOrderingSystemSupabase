@@ -6,6 +6,7 @@ import { CUSTOMER_SECTIONS } from "@/core/appRoutes";
 import { pesoFromCents } from "@/core/formatters";
 import { promoSlides } from "@/data/homeSpotlightCafes";
 import { AppDownloadBanner } from "@/components/AppDownloadBanner";
+import { AppDeveloperCredit } from "@/components/AppDeveloperCredit";
 import { Button, PageHeader } from "@/components/ui";
 import { loadProducts } from "@/services/supabaseService";
 import type { CatalogProduct } from "@/types";
@@ -176,6 +177,8 @@ export function CustomerHomeTab({
       <div className="hidden overflow-hidden rounded-hero lg:block">
         <img src={AppAssets.promo2} alt="" className="h-48 w-full object-cover" />
       </div>
+
+      <AppDeveloperCredit className="pt-2 text-center" />
     </div>
   );
 }

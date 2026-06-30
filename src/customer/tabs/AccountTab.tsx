@@ -1,4 +1,5 @@
 import { AppDownloadBanner } from "@/components/AppDownloadBanner";
+import { AppDeveloperCredit } from "@/components/AppDeveloperCredit";
 import { AppAssets } from "@/core/assets";
 import { Button, Card, PageHeader, SectionLabel } from "@/components/ui";
 import { CUSTOMER_SECTIONS } from "@/core/appRoutes";
@@ -24,6 +25,8 @@ export function CustomerAccountTab({
       </Card>
 
       <AppDownloadBanner variant="compact" />
+
+      <AppDeveloperCredit className="mt-4 text-center" />
 
       <Card className="cursor-pointer overflow-hidden border-yellow-400/50 bg-gradient-to-br from-yellow/20 via-cream to-white transition hover:-translate-y-0.5 hover:shadow-lg" onClick={onBrowseMenu}>
         <div className="flex flex-col gap-4 xs:flex-row">

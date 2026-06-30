@@ -1,5 +1,6 @@
 import type { ReactNode } from "react";
 import { AppDownloadBanner } from "@/components/AppDownloadBanner";
+import { AppDeveloperCredit } from "@/components/AppDeveloperCredit";
 import { PublicSiteShell } from "@/components/PublicSiteShell";
 import { Logo } from "@/components/ui";
 import { AppBrand } from "@/core/assets";
@@ -74,6 +75,8 @@ export function AuthLayout({
               {children}
 
               <AppDownloadBanner variant="compact" className="mt-6" />
+
+              <AppDeveloperCredit className="mt-4 text-center" compact />
 
               {footer ? <div className="auth-card-footer">{footer}</div> : null}
             </div>
