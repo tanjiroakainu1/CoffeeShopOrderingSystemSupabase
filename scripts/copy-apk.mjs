@@ -10,7 +10,7 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const webRoot = path.resolve(__dirname, "..");
 const repoRoot = path.resolve(webRoot, "..");
 const publicDir = path.join(webRoot, "public", "downloads");
-const dest = path.join(publicDir, "roast-bean.apk");
+const dest = path.join(publicDir, "coffeeshop.apk");
 
 const candidates = [
   path.join(repoRoot, "build", "app", "outputs", "flutter-apk", "app-release.apk"),
@@ -22,9 +22,9 @@ const source = candidates.find((p) => existsSync(p));
 if (!source) {
   if (existsSync(dest)) {
     const mb = (statSync(dest).size / (1024 * 1024)).toFixed(1);
-    console.log(`[copy-apk] Using committed APK at public/downloads/roast-bean.apk (${mb} MB)`);
+    console.log(`[copy-apk] Using committed APK at public/downloads/coffeeshop.apk (${mb} MB)`);
   } else {
-    console.warn("[copy-apk] No Flutter APK found and no committed public/downloads/roast-bean.apk.");
+    console.warn("[copy-apk] No Flutter APK found and no committed public/downloads/coffeeshop.apk.");
   }
   process.exit(0);
 }
@@ -32,4 +32,4 @@ if (!source) {
 mkdirSync(publicDir, { recursive: true });
 cpSync(source, dest);
 const mb = (statSync(dest).size / (1024 * 1024)).toFixed(1);
-console.log(`[copy-apk] ${path.relative(repoRoot, source)} → public/downloads/roast-bean.apk (${mb} MB)`);
+console.log(`[copy-apk] ${path.relative(webRoot, source)} → public/downloads/coffeeshop.apk (${mb} MB)`);

@@ -1,11 +1,11 @@
 {
-  "name": "Roast & Bean",
-  "short_name": "Roast & Bean",
+  "name": "CoffeeShop",
+  "short_name": "CoffeeShop",
   "start_url": ".",
   "display": "standalone",
   "background_color": "#FFFBEB",
   "theme_color": "#065F46",
-  "description": "Roast & Bean Coffee Shop — order, reservations, and delivery. Developed by Raminder Jangao.",
+  "description": "CoffeeShop — order, reservations, and delivery. Developed by Raminder Jangao.",
   "orientation": "portrait-primary",
   "prefer_related_applications": false,
   "icons": [

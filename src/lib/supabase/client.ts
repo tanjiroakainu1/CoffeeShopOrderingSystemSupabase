@@ -12,7 +12,7 @@ export function getSupabase(): SupabaseClient | null {
       persistSession: true,
       autoRefreshToken: true,
       detectSessionInUrl: true,
-      storageKey: "beander-supabase-auth",
+      storageKey: "coffeeshop-supabase-auth",
     },
   });
   return client;

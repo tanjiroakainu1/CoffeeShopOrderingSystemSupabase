@@ -1,6 +1,6 @@
 /** Mirrors `lib/core/cafe_location.dart` — single source for shop address copy. */
 export const CafeLocation = {
-  venueName: "Roast & Bean",
+  venueName: "CoffeeShop",
   streetAddress: "Maginhawa Street, Teachers Village · Quezon City",
   cityLine: "Metro Manila, Philippines · Near UP Diliman",
   /** Short label for headers and store info bars. */

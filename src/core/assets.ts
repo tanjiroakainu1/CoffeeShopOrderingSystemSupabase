@@ -5,8 +5,8 @@ export const AppAssets = {
 } as const;
 
 export const AppBrand = {
-  displayName: import.meta.env.VITE_APP_NAME?.trim() || "Roast & Bean",
-  androidLabel: import.meta.env.VITE_APP_ANDROID_LABEL?.trim() || "BEAN.der",
+  displayName: import.meta.env.VITE_APP_NAME?.trim() || "CoffeeShop",
+  androidLabel: import.meta.env.VITE_APP_ANDROID_LABEL?.trim() || "CoffeeShop",
   developerName: import.meta.env.VITE_APP_DEVELOPER_NAME?.trim() || "Raminder Jangao",
 } as const;
 

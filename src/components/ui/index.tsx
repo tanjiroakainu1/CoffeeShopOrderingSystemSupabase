@@ -44,11 +44,13 @@ export function Card({
   );
 }
 
+import { AppBrand } from "@/core/assets";
+
 export function Logo({ className = "h-14 w-14" }: { className?: string }) {
   return (
     <img
       src="/logo123.jpeg"
-      alt="Roast & Bean logo"
+      alt={`${AppBrand.displayName} logo`}
       className={`rounded-2xl object-contain shadow-sm ${className}`}
     />
   );
@@ -60,7 +62,7 @@ export function LoadingScreen() {
       <div className="rounded-full bg-crema/35 p-5 shadow-card ring-4 ring-white/60">
         <Logo className="h-16 w-16" />
       </div>
-      <h1 className="mt-7 font-serif text-2xl font-bold text-brown-deep">Roast & Bean</h1>
+      <h1 className="mt-7 font-serif text-2xl font-bold text-brown-deep">{AppBrand.displayName}</h1>
       <p className="mt-2 text-muted">Loading your experience…</p>
       <div className="mt-8 h-9 w-9 animate-spin rounded-full border-[3px] border-emerald-deep/20 border-t-yellow" />
     </div>
