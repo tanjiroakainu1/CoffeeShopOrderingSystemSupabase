@@ -6,7 +6,7 @@
   "scripts": {
     "start": "vite",
     "dev": "vite",
-    "prebuild": "node scripts/sync-public-assets.mjs",
+    "prebuild": "node scripts/sync-public-assets.mjs && node ../scripts/copy-apk.mjs",
     "build": "tsc --noEmit && vite build",
     "preview": "vite preview",
     "sync-assets": "node scripts/sync-public-assets.mjs",

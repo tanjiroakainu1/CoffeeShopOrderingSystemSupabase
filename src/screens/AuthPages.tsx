@@ -2,6 +2,8 @@ import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { Lock, LogIn, Mail, UtensilsCrossed, User, UserPlus } from "lucide-react";
 import { AuthField, AuthLayout } from "@/components/AuthLayout";
+import { AuthDemoCredentials } from "@/components/AuthDemoCredentials";
+import { DEMO_ADMIN_CREDENTIALS } from "@/core/demoCredentials";
 import { AuthError } from "@/services/authService";
 import { useAuth } from "@/context/AuthContext";
 import { Button } from "@/components/ui";
@@ -62,6 +64,14 @@ export function SignInPage() {
           <UtensilsCrossed className="h-4 w-4 shrink-0" />
           Browse menu (no sign-in)
         </Link>
+        <AuthDemoCredentials
+          className="mb-6"
+          onUseAdmin={() => {
+            setEmail(DEMO_ADMIN_CREDENTIALS.email);
+            setPassword(DEMO_ADMIN_CREDENTIALS.password);
+            setErr(null);
+          }}
+        />
         <form className="auth-form" onSubmit={(e) => void submit(e)}>
           <AuthField
             id="sign-in-email"

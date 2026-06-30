@@ -671,6 +671,30 @@
   .auth-link-row {
     @apply flex flex-col gap-2 text-center text-sm sm:flex-row sm:items-center sm:justify-center sm:gap-1;
   }
+  .auth-demo-credentials {
+    @apply rounded-card border border-amber-200 bg-amber-50/95 p-4 shadow-sm;
+  }
+  .auth-demo-credentials-icon {
+    @apply flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-amber-100 text-amber-800;
+  }
+  .auth-demo-credentials-title {
+    @apply font-serif text-base font-extrabold text-brown-deep;
+  }
+  .auth-demo-credentials-list {
+    @apply mt-3 space-y-2 text-sm;
+  }
+  .auth-demo-credentials-list div {
+    @apply flex flex-col gap-0.5 sm:flex-row sm:items-center sm:gap-3;
+  }
+  .auth-demo-credentials-list dt {
+    @apply w-20 shrink-0 font-semibold text-muted;
+  }
+  .auth-demo-credentials-list dd code {
+    @apply rounded-md bg-white/90 px-2 py-1 font-mono text-sm font-bold text-brown-deep ring-1 ring-amber-200/80;
+  }
+  .auth-demo-credentials-btn {
+    @apply mt-3 rounded-xl border border-amber-300 bg-white px-4 py-2 text-sm font-bold text-brown-deep transition hover:border-emerald-deep/30 hover:bg-emerald-light/40;
+  }
   .form-label {
     @apply block text-sm font-semibold text-brown-deep;
   }
